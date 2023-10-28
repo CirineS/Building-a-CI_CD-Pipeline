@@ -79,5 +79,3 @@ To inspect the logs from your running application, browse https://<app-name>.scm
 1- Automated Testing: Implement more comprehensive automated testing, including unit tests, integration tests, and end-to-end tests to ensure code reliability and quality.<br>
 2- User Interface: Create a user-friendly web interface for users to interact with the application, input data, and receive predictions.<br>
 3- Scalability: Design the application to be scalable, allowing it to handle increased user load and larger datasets efficiently...<br>
-
-## Demo
