@@ -1,6 +1,7 @@
 # Overview
 
-In this project, I've created a GitHub repository from scratch and set up a scaffolding that enables both Continuous Integration and Continuous Delivery. I've leveraged GitHub Actions along with a Makefile, requirements.txt, and application code to automate the initial linting, testing, and installation cycle. Additionally, I've integrated this project with Azure Pipelines to enable Continuous Delivery to Azure App Service. As part of this project, a pre-trained scikit-learn model is provided to predict housing prices in Boston based on various features, such as average rooms in a home.
+In this project, I've created a GitHub repository from scratch and set up a scaffolding that enables both Continuous Integration and Continuous Delivery. I've leveraged GitHub Actions along with a Makefile, requirements.txt, and application code to automate the initial linting, testing, and installation cycle. Additionally, I've integrated this project with Azure Pipelines to enable Continuous Delivery to Azure App Service. As part of this project, a pre-trained scikit-learn model is provided to predict housing prices in Boston based on various features, such as average rooms in a home. Here are the [starter_files](https://github.com/udacity/nd082-Azure-Cloud-DevOps-Starter-Code/tree/master/C2-AgileDevelopmentwithAzure/project/starter_files)
+
 
 ## Project Plan
 Here's the link to the Trello board for project management: [Trello Board Link](https://trello.com/b/q4Nh5SnY/building-a-ci-cd-pipeline)
