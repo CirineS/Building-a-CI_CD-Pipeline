@@ -18,23 +18,25 @@ This is the architectural diagram illustrarting the sequence of steps in the pro
 
 In the Continuous Delivery step, the GitHub repository connects to Azure Pipelines, a cloud build server. After a successful build, the pipeline deploys the code to an Azure web app. To verify success, it sends a POST request with JSON input, receiving a prediction. A shell script passes input data through a pre-trained model, predicting Boston house prices using essential features.
 
-* Create the Cloud-Based Development Environment and succesfully clone the project into Azure cloud shell
+* **Create the Cloud-Based Development Environment and succesfully clone the project into Azure cloud shell**
   Launch an Azure Cloud Shell environment and integrate Github repository communication. In the first step, code in GitHub is cloned into the Azure cloud shell environment, and the webapp is run in the Azure Cloud Shell environment.
   <img width="649" alt="Project_cloned" src="https://github.com/CirineS/Building-a-CI_CD-Pipeline-Project/assets/142796680/22dcb164-a87c-45d4-a40f-316fe2f1e9da">
 
   
-* Local Test
+* **Local Test**
+  
 A Makefile is a handy way to create shortcuts to build, test, and deploy a project.
 
-Below are assing tests that displays after running the make all command from the Makefile
+Below are the passing tests that displays after running the make all command from the Makefile
 <img width="951" alt="passing_tests_100" src="https://github.com/CirineS/Building-a-CI_CD-Pipeline-Project/assets/142796680/a3d154ef-fd02-4cd8-a33e-8487644336f1">
 
 
-* Passing tests in Github Actions
+* **Passing tests in Github Actions**
 <img width="658" alt="passing_Github_Actions_Build" src="https://github.com/CirineS/Building-a-CI_CD-Pipeline-Project/assets/142796680/0cbc8d11-76ab-4252-8c00-a6f43b72b7f1">
 
 
-* Creating a pipeline
+* **Creating a pipeline**
+  
 To create a pipeline, first we need to create an agent.
 In Project Settings, under Pipelines, click on agent pools, then on agents, click on New agent, and follow the wizard.
 Configure the agent in the Azure CLI, run it using ./run.sh It will build and deploy the job.
@@ -43,14 +45,15 @@ Once, done, we're now able to create the pipeline. Under pipelines, you click on
 <img width="745" alt="job succeeded" src="https://github.com/CirineS/Building-a-CI_CD-Pipeline-Project/assets/142796680/809c214f-603c-4f8b-a8a4-8fdeffdc8d21">
 
 
-* Successful prediction from deployed flask app in Azure Cloud Shell
+* **Successful prediction from deployed flask app in Azure Cloud Shell**
   *  in Port 5000:
   <img width="714" alt="make prediction exec" src="https://github.com/CirineS/Building-a-CI_CD-Pipeline-Project/assets/142796680/22efb396-f159-429b-b15b-3954f7db1d53">
   *  and in Port 443:
   <img width="737" alt="exec make predict" src="https://github.com/CirineS/Building-a-CI_CD-Pipeline-Project/assets/142796680/9ac4211d-f8fe-40f9-b0bb-de167c65664e">
 
 
-* Running Azure App Service from Azure Pipelines automatic deployment
+* **Running Azure App Service from Azure Pipelines automatic deployment**
+  
 This screenshot is the build job running successfully:
 <img width="960" alt="build ok" src="https://github.com/CirineS/Building-a-CI_CD-Pipeline-Project/assets/142796680/c11d9e2e-9a25-4275-a17c-b03024f40032">
 
