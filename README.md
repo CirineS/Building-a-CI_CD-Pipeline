@@ -11,9 +11,9 @@ Here's the link to the Trello board for project management: [Trello Board Link](
 You can find project estimates in this spreadsheet: [project-management-template.xlsx](https://github.com/CirineS/Building-a-CI_CD-Pipeline-Project/files/13196820/project-management-template.xlsx)
 
 ## Instructions
-Architectural Diagram
+
 ![architectural diagram](https://user-images.githubusercontent.com/97893144/192469299-7bf7f2a8-ada1-400d-bc3a-0d187dfedc9e.png)
-The diagram illustrates the sequence of steps in the project's construction. Code is pushed to a remote repository provider, in this case, GitHub, which triggers the pipeline on a "push" event. Software building involves multiple steps, including installing dependencies, linting, testing, and code compilation, which are all automated using a Makefile. Continuous Integration requires a build server, a centralized machine dedicated to continuously building the project whenever code is committed. GitHub Actions is used as the build server, and its integration with GitHub allows automatic builds upon code commits.
+This is the architectural diagram illustrarting the sequence of steps in the project's construction. Code is pushed to a remote repository provider, in this case, GitHub, which triggers the pipeline on a "push" event. Software building involves multiple steps, including installing dependencies, linting, testing, and code compilation, which are all automated using a Makefile. Continuous Integration requires a build server, a centralized machine dedicated to continuously building the project whenever code is committed. GitHub Actions is used as the build server, and its integration with GitHub allows automatic builds upon code commits.
 
 In the Continuous Delivery step, the GitHub repository connects to Azure Pipelines, a cloud build server. After a successful build, the pipeline deploys the code to an Azure web app. To verify success, it sends a POST request with JSON input, receiving a prediction. A shell script passes input data through a pre-trained model, predicting Boston house prices using essential features.
 
