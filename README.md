@@ -1,97 +1,66 @@
-Github Actions Build Status
-Overview
+
+![Github Actions Build Status](https://github.com/CirineS/Building-a-CI_CD-Pipeline-Project/actions/workflows/main.yml/badge.svg)
+
+# Overview
+
 In this project, I've created a GitHub repository from scratch and set up a scaffolding that enables both Continuous Integration and Continuous Delivery. I've leveraged GitHub Actions along with a Makefile, requirements.txt, and application code to automate the initial linting, testing, and installation cycle. Additionally, I've integrated this project with Azure Pipelines to enable Continuous Delivery to Azure App Service. As part of this project, a pre-trained scikit-learn model is provided to predict housing prices in Boston based on various features, such as average rooms in a home.
 
-Project Plan
-Here's the link to the Trello board for project management: Trello Board Link
+## Project Plan
+Here's the link to the Trello board for project management: [Trello Board Link](https://trello.com/b/q4Nh5SnY/building-a-ci-cd-pipeline)
 
-You can find project estimates in this spreadsheet: Azure CI_CD Pipeline Project Estimates1.xlsx
+You can find project estimates in this spreadsheet: [project-management-template.xlsx](https://github.com/CirineS/Building-a-CI_CD-Pipeline-Project/files/13196820/project-management-template.xlsx)
 
-Instructions
+## Instructions
 Architectural Diagram
-Architectural Diagram
-
+![architectural diagram](https://user-images.githubusercontent.com/97893144/192469299-7bf7f2a8-ada1-400d-bc3a-0d187dfedc9e.png)
 The diagram illustrates the sequence of steps in the project's construction. Code is pushed to a remote repository provider, in this case, GitHub, which triggers the pipeline on a "push" event. Software building involves multiple steps, including installing dependencies, linting, testing, and code compilation, which are all automated using a Makefile. Continuous Integration requires a build server, a centralized machine dedicated to continuously building the project whenever code is committed. GitHub Actions is used as the build server, and its integration with GitHub allows automatic builds upon code commits.
 
-In the Continuous Delivery step, the GitHub repository is linked with Azure Pipelines (a cloud-native build server) to generate the build package after a successful build. This pipeline connects to a predefined Azure web app to deploy and update the code. Verification of a successful deployment is done by making a POST request, passing input parameters in JSON, and receiving a prediction response. A shell script sends input data to the application via the appropriate port. Each numerical value represents a feature crucial for determining Boston house prices. The source code passes this data through a pre-trained machine learning model and returns a predicted house price.
+In the Continuous Delivery step, the GitHub repository connects to Azure Pipelines, a cloud build server. After a successful build, the pipeline deploys the code to an Azure web app. To verify success, it sends a POST request with JSON input, receiving a prediction. A shell script passes input data through a pre-trained model, predicting Boston house prices using essential features.
 
-Create the Cloud-Based Development Environment and Successfully Clone the Project into Azure Cloud Shell
-In this diagram, Azure Cloud Shell is used to create an empty scaffold with tests, source code, a Makefile, and requirements.
+* Create the Cloud-Based Development Environment and succesfully clone the project into Azure cloud shell
+  Launch an Azure Cloud Shell environment and integrate Github repository communication. In the first step, code in GitHub is cloned into the Azure cloud shell environment, and the webapp is run in the Azure Cloud Shell environment.
+  <img width="649" alt="Project_cloned" src="https://github.com/CirineS/Building-a-CI_CD-Pipeline-Project/assets/142796680/22dcb164-a87c-45d4-a40f-316fe2f1e9da">
+  
+* Local Test
+A Makefile is a handy way to create shortcuts to build, test, and deploy a project.
 
-Azure Cloud Shell
+Below are assing tests that displays after running the make all command from the Makefile
+<img width="951" alt="passing_tests_100" src="https://github.com/CirineS/Building-a-CI_CD-Pipeline-Project/assets/142796680/a3d154ef-fd02-4cd8-a33e-8487644336f1">
 
-Launch an Azure Cloud Shell environment and integrate GitHub repository communication. In the first step, code on GitHub is cloned into the Azure Cloud Shell environment, and the web app is run in the Azure Cloud Shell environment.
+* Passing tests in Github Actions
+<img width="658" alt="passing_Github_Actions_Build" src="https://github.com/CirineS/Building-a-CI_CD-Pipeline-Project/assets/142796680/0cbc8d11-76ab-4252-8c00-a6f43b72b7f1">
 
-Integration with Azure Cloud Shell
+* Creating a pipeline
+To create a pipeline, first we need to create an agent.
+In Project Settings, under Pipelines, click on agent pools, then on agents, click on New agent, and follow the wizard.
+Configure the agent in the Azure CLI, run it using ./run.sh It will build and deploy the job.
+<img width="542" alt="build   deploy succeeded on azure CLI" src="https://github.com/CirineS/Building-a-CI_CD-Pipeline-Project/assets/142796680/4fcf36a0-d9d3-428a-bb79-af29c6792acf">
+Once, done, we're now able to create the pipeline. Under pipelines, you click on New Pipeline, and give the name of the repo. Follow the Wizard to connect it to the github repo.
+<img width="745" alt="job succeeded" src="https://github.com/CirineS/Building-a-CI_CD-Pipeline-Project/assets/142796680/809c214f-603c-4f8b-a8a4-8fdeffdc8d21">
 
-Local Test
-A Makefile provides shortcuts for building, testing, and deploying a project. Below are the passing tests displayed after running the make all command from the Makefile.
+* Successful prediction from deployed flask app in Azure Cloud Shell
+  *  in Port 5000:
+  <img width="714" alt="make prediction exec" src="https://github.com/CirineS/Building-a-CI_CD-Pipeline-Project/assets/142796680/22efb396-f159-429b-b15b-3954f7db1d53">
+  *  and in Port 443:
+  <img width="737" alt="exec make predict" src="https://github.com/CirineS/Building-a-CI_CD-Pipeline-Project/assets/142796680/9ac4211d-f8fe-40f9-b0bb-de167c65664e">
 
-Local Tests
+* Running Azure App Service from Azure Pipelines automatic deployment
+This screenshot is the build job running successfully:
+<img width="960" alt="build ok" src="https://github.com/CirineS/Building-a-CI_CD-Pipeline-Project/assets/142796680/c11d9e2e-9a25-4275-a17c-b03024f40032">
 
-Local Tests on Azure Cloud Shell
+This screenshot is the deployment job running successfully:
+<img width="960" alt="deployment succeeded" src="https://github.com/CirineS/Building-a-CI_CD-Pipeline-Project/assets/142796680/b4889727-f179-4f04-bf2c-0275198332c1">
 
-CI: Configure GitHub Actions
-Configure GitHub Actions to test the project on GitHub code change events. This is a necessary step for remote Continuous Integration.
+Now, we're able to launch the app on the browser
+<img width="578" alt="app link" src="https://github.com/CirineS/Building-a-CI_CD-Pipeline-Project/assets/142796680/2e845600-5e81-4fd1-9bbe-7a5306ce2da1">
 
-Configuring a SaaS build server like GitHub Actions is an essential practice for any software project aiming to implement DevOps. This completes the Continuous Integration phase and paves the way for Continuous Delivery.
+To inspect the logs from your running application, browse https://<app-name>.scm.azurewebsites.net/api/logs/docker
+<img width="834" alt="Output of streamed log files from deployed application" src="https://github.com/CirineS/Building-a-CI_CD-Pipeline-Project/assets/142796680/1da2c538-5373-48fa-97bc-eb929d7de6c8">
 
-This diagram shows how code can be automatically tested by enabling GitHub Actions. A push change to GitHub triggers the GitHub Actions container, which runs a series of commands.
+## Enhancements
+  The possible enhancements that could add value to this project could be:
+1- Automated Testing: Implement more comprehensive automated testing, including unit tests, integration tests, and end-to-end tests to ensure code reliability and quality.
+2- User Interface: Create a user-friendly web interface for users to interact with the application, input data, and receive predictions.
+3- Scalability: Design the application to be scalable, allowing it to handle increased user load and larger datasets efficiently...
 
-GitHub Actions for Automated Testing
-
-Below is a screenshot of remote code testing and the finalized Continuous Integration through GitHub Actions.
-
-GitHub Actions Workflow
-
-Continuous Delivery on Azure
-This diagram demonstrates the continuous delivery of a Flask application using Azure Pipelines and Azure App Service.
-
-Continuous Delivery with Azure Pipelines
-
-Successful Prediction from Deployed Flask App in Azure Cloud Shell
-The Flask app can be manually deployed on Azure App Service by running the command. The app can then be tested in the Azure Cloud Shell environment by running make_predict_azure_app.sh.
-
-bash
-Copy code
-az webapp up --name mywebapp10021990 --resource-group azuredevops --runtime "PYTHON:3.7"
-bash make_predict_azure_app.sh
-Successful Prediction
-
-Successful Project Deployment in Azure Pipelines
-Azure Pipelines Deployment
-
-Application Running Against a Load Test with Locust
-The Makefile has a load-test step that runs when make all is called, using Locust to perform load testing on web apps in headless mode. The command is as follows:
-
-bash
-Copy code
-locust -f locustfile.py --headless -u 10 -r 1 -H http://localhost:5000 -t 50s --check-fail-ratio 0.08 --only-summary
-After finishing the load test, Locust displays summary statistics.
-
-Locust Load Test
-
-The GitHub Actions pipeline run output is displayed below.
-
-GitHub Actions Pipeline
-
-GitHub Actions Pipeline - Successful Deployment
-
-Azure Web App Screenshot
-Azure Web App
-
-Azure App Service Screenshot
-Azure App Service
-
-Output of Streamed Log Files from Deployed Application - Streamed Log Files
-Streamed Log Files
-
-CD with Azure Pipelines After Making Changes in app.py
-Continuous Delivery with Azure Pipelines
-
-Enhancements
-Direct deployment from GitHub Actions to Azure Web App Service.
-Adding more test cases to improve the application.
-Creating a UI for making predictions.
-Demo
-You can watch a demo of the project on YouTube: Demo
+## Demo
