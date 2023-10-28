@@ -1,6 +1,3 @@
-
-![Github Actions Build Status](https://github.com/CirineS/Building-a-CI_CD-Pipeline-Project/actions/workflows/main.yml/badge.svg)
-
 # Overview
 
 In this project, I've created a GitHub repository from scratch and set up a scaffolding that enables both Continuous Integration and Continuous Delivery. I've leveraged GitHub Actions along with a Makefile, requirements.txt, and application code to automate the initial linting, testing, and installation cycle. Additionally, I've integrated this project with Azure Pipelines to enable Continuous Delivery to Azure App Service. As part of this project, a pre-trained scikit-learn model is provided to predict housing prices in Boston based on various features, such as average rooms in a home.
