@@ -19,7 +19,8 @@ This is the architectural diagram illustrarting the sequence of steps in the pro
 In the Continuous Delivery step, the GitHub repository connects to Azure Pipelines, a cloud build server. After a successful build, the pipeline deploys the code to an Azure web app. To verify success, it sends a POST request with JSON input, receiving a prediction. A shell script passes input data through a pre-trained model, predicting Boston house prices using essential features.
 
 * **Create the Cloud-Based Development Environment and succesfully clone the project into Azure cloud shell**
-  Launch an Azure Cloud Shell environment and integrate Github repository communication. In the first step, code in GitHub is cloned into the Azure cloud shell environment, and the webapp is run in the Azure Cloud Shell environment.
+
+Launch an Azure Cloud Shell environment and integrate Github repository communication. In the first step, code in GitHub is cloned into the Azure cloud shell environment, and the webapp is run in the Azure Cloud Shell environment.
   <img width="649" alt="Project_cloned" src="https://github.com/CirineS/Building-a-CI_CD-Pipeline-Project/assets/142796680/22dcb164-a87c-45d4-a40f-316fe2f1e9da">
 
   
