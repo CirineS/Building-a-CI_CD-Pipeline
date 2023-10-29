@@ -1,4 +1,4 @@
-[![Python application test with Github Actions](https://github.com/CirineS/Building-a-CI_CD-Pipeline-Project/actions/workflows/pythonapp.yml/badge.svg)](https://github.com/CirineS/Building-a-CI_CD-Pipeline-Project/actions/workflows/pythonapp.yml)
+[![Build and deploy Python app to Azure Web App - mywebapp345678](https://github.com/CirineS/Building-a-CI_CD-Pipeline-Project/actions/workflows/pythonapp.yml/badge.svg?branch=master)](https://github.com/CirineS/Building-a-CI_CD-Pipeline-Project/actions/workflows/pythonapp.yml)
 
 # Overview
 
