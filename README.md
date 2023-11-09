@@ -9,7 +9,7 @@ In this project, I've created a GitHub repository from scratch and set up a scaf
 Here's the link to the Trello board for project management: [Trello Board Link](https://trello.com/b/q4Nh5SnY/building-a-ci-cd-pipeline)
 
 You can find project estimates in this spreadsheet: [project-management-template.xlsx](https://github.com/CirineS/Building-a-CI_CD-Pipeline-Project/files/13309455/project-management-template.xlsx)
-
+![image](https://github.com/CirineS/Building-a-CI_CD-Pipeline-Project/assets/142796680/fdb88763-1da7-45d1-ae4f-0da22176876b)
 
 
 
