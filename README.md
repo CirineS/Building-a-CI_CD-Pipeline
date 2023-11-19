@@ -48,7 +48,7 @@ Below are the passing tests that displays after running the make all command fro
   <img width="737" alt="exec make predict" src="https://github.com/CirineS/Building-a-CI_CD-Pipeline-Project/assets/142796680/9ac4211d-f8fe-40f9-b0bb-de167c65664e">
 
 
-* **Successful prediction from deployed flask app in Azure Cloud Shell**
+* **Locust test**
   
   ![run locust](https://github.com/CirineS/Building-a-CI_CD-Pipeline-Project/assets/142796680/49d021a7-dd64-4a35-9f6e-03949cb00c10)
 
@@ -57,8 +57,6 @@ Below are the passing tests that displays after running the make all command fro
 
   <img width="942" alt="Capture charts" src="https://github.com/CirineS/Building-a-CI_CD-Pipeline-Project/assets/142796680/0ec1bdf0-2fe7-4c41-80a4-94b38eab1859">
 
-
-* **Running Azure App Service from Azure Pipelines automatic deployment**
 
 * **Creating a pipeline**
   
@@ -70,9 +68,6 @@ Configure the agent in the Azure CLI, run it using ./run.sh It will build and de
 
 
 Once, done, we're now able to create the pipeline. Under pipelines, you click on New Pipeline, and give the name of the repo. Follow the Wizard to connect it to the github repo.
-
-<img width="745" alt="job succeeded" src="https://github.com/CirineS/Building-a-CI_CD-Pipeline-Project/assets/142796680/809c214f-603c-4f8b-a8a4-8fdeffdc8d21">
-
 
 
 This screenshot is the build job running successfully:
