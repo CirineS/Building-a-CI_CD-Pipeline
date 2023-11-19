@@ -96,6 +96,4 @@ To inspect the logs from your running application, browse https://<app-name>.scm
 2- User Interface: Create a user-friendly web interface for users to interact with the application, input data, and receive predictions.<br>
 3- Scalability: Design the application to be scalable, allowing it to handle increased user load and larger datasets efficiently...<br>
 
-# NB
-Today I wanted to finish the last 2 missing steps : load test and record video, but I encountered this issue encountered to load workspace:
-![image](https://github.com/CirineS/Building-a-CI_CD-Pipeline-Project/assets/142796680/eaff234d-1e91-47ed-91d8-f4fad697497e)
+# Demo
