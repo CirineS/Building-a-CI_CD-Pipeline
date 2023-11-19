@@ -94,4 +94,4 @@ To inspect the logs from your running application, browse https://<app-name>.scm
 3- Scalability: Design the application to be scalable, allowing it to handle increased user load and larger datasets efficiently...<br>
 
 # Demo
-[Tutorial]([https://youtu.be/M7YUdrAZt7w)
+[Tutorial demo]([https://youtu.be/M7YUdrAZt7w)
