@@ -44,6 +44,7 @@ Below are the passing tests that displays after running the make all command fro
   *  in Port 5000:
 <img width="714" alt="make prediction exec" src="https://github.com/CirineS/Building-a-CI_CD-Pipeline-Project/assets/142796680/22efb396-f159-429b-b15b-3954f7db1d53">
 
+
   *  and in Port 443:
 <img width="737" alt="exec make predict" src="https://github.com/CirineS/Building-a-CI_CD-Pipeline-Project/assets/142796680/9ac4211d-f8fe-40f9-b0bb-de167c65664e">
 
