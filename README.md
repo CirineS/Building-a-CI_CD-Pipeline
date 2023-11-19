@@ -24,7 +24,7 @@ In the Continuous Delivery step, the GitHub repository connects to Azure Pipelin
 * **Create the Cloud-Based Development Environment and succesfully clone the project into Azure cloud shell**
 
 Launch an Azure Cloud Shell environment and integrate Github repository communication. In the first step, code in GitHub is cloned into the Azure cloud shell environment, and the webapp is run in the Azure Cloud Shell environment.
-  <img width="649" alt="Project_cloned" src="https://github.com/CirineS/Building-a-CI_CD-Pipeline-Project/assets/142796680/22dcb164-a87c-45d4-a40f-316fe2f1e9da">
+<img width="649" alt="Project_cloned" src="https://github.com/CirineS/Building-a-CI_CD-Pipeline-Project/assets/142796680/22dcb164-a87c-45d4-a40f-316fe2f1e9da">
 
   
 * **Local Test**
@@ -42,20 +42,20 @@ Below are the passing tests that displays after running the make all command fro
 
 * **Successful prediction from deployed flask app in Azure Cloud Shell**
   *  in Port 5000:
-  <img width="714" alt="make prediction exec" src="https://github.com/CirineS/Building-a-CI_CD-Pipeline-Project/assets/142796680/22efb396-f159-429b-b15b-3954f7db1d53">
+<img width="714" alt="make prediction exec" src="https://github.com/CirineS/Building-a-CI_CD-Pipeline-Project/assets/142796680/22efb396-f159-429b-b15b-3954f7db1d53">
   
   *  and in Port 443:
-  <img width="737" alt="exec make predict" src="https://github.com/CirineS/Building-a-CI_CD-Pipeline-Project/assets/142796680/9ac4211d-f8fe-40f9-b0bb-de167c65664e">
+<img width="737" alt="exec make predict" src="https://github.com/CirineS/Building-a-CI_CD-Pipeline-Project/assets/142796680/9ac4211d-f8fe-40f9-b0bb-de167c65664e">
 
 
 * **Locust test**
   
-  ![run locust](https://github.com/CirineS/Building-a-CI_CD-Pipeline-Project/assets/142796680/49d021a7-dd64-4a35-9f6e-03949cb00c10)
+![run locust](https://github.com/CirineS/Building-a-CI_CD-Pipeline-Project/assets/142796680/49d021a7-dd64-4a35-9f6e-03949cb00c10)
 
-  By creating some tests using locust and running them in the command line; this will run the locust file. You can see the results below in the localhost 8089:
-  <img width="960" alt="pantallazo_locust" src="https://github.com/CirineS/Building-a-CI_CD-Pipeline-Project/assets/142796680/32bf3ef0-9926-41ad-8c31-84f8a927b5de">
+By creating some tests using locust and running them in the command line; this will run the locust file. You can see the results below in the localhost 8089:
+<img width="960" alt="pantallazo_locust" src="https://github.com/CirineS/Building-a-CI_CD-Pipeline-Project/assets/142796680/32bf3ef0-9926-41ad-8c31-84f8a927b5de">
 
-  <img width="942" alt="Capture charts" src="https://github.com/CirineS/Building-a-CI_CD-Pipeline-Project/assets/142796680/0ec1bdf0-2fe7-4c41-80a4-94b38eab1859">
+<img width="942" alt="Capture charts" src="https://github.com/CirineS/Building-a-CI_CD-Pipeline-Project/assets/142796680/0ec1bdf0-2fe7-4c41-80a4-94b38eab1859">
 
 
 * **Creating a pipeline**
