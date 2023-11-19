@@ -39,19 +39,6 @@ Below are the passing tests that displays after running the make all command fro
 <img width="658" alt="passing_Github_Actions_Build" src="https://github.com/CirineS/Building-a-CI_CD-Pipeline-Project/assets/142796680/0cbc8d11-76ab-4252-8c00-a6f43b72b7f1">
 <br>
 
-* **Creating a pipeline**
-  
-To create a pipeline, first we need to create an agent.
-In Project Settings, under Pipelines, click on agent pools, then on agents, click on New agent, and follow the wizard.
-Configure the agent in the Azure CLI, run it using ./run.sh It will build and deploy the job.
-
-<img width="542" alt="build   deploy succeeded on azure CLI" src="https://github.com/CirineS/Building-a-CI_CD-Pipeline-Project/assets/142796680/4fcf36a0-d9d3-428a-bb79-af29c6792acf">
-
-
-Once, done, we're now able to create the pipeline. Under pipelines, you click on New Pipeline, and give the name of the repo. Follow the Wizard to connect it to the github repo.
-
-<img width="745" alt="job succeeded" src="https://github.com/CirineS/Building-a-CI_CD-Pipeline-Project/assets/142796680/809c214f-603c-4f8b-a8a4-8fdeffdc8d21">
-
 
 * **Successful prediction from deployed flask app in Azure Cloud Shell**
   *  in Port 5000:
@@ -72,7 +59,22 @@ Once, done, we're now able to create the pipeline. Under pipelines, you click on
 
 
 * **Running Azure App Service from Azure Pipelines automatic deployment**
+
+* **Creating a pipeline**
   
+To create a pipeline, first we need to create an agent.
+In Project Settings, under Pipelines, click on agent pools, then on agents, click on New agent, and follow the wizard.
+Configure the agent in the Azure CLI, run it using ./run.sh It will build and deploy the job.
+
+<img width="542" alt="build   deploy succeeded on azure CLI" src="https://github.com/CirineS/Building-a-CI_CD-Pipeline-Project/assets/142796680/4fcf36a0-d9d3-428a-bb79-af29c6792acf">
+
+
+Once, done, we're now able to create the pipeline. Under pipelines, you click on New Pipeline, and give the name of the repo. Follow the Wizard to connect it to the github repo.
+
+<img width="745" alt="job succeeded" src="https://github.com/CirineS/Building-a-CI_CD-Pipeline-Project/assets/142796680/809c214f-603c-4f8b-a8a4-8fdeffdc8d21">
+
+
+
 This screenshot is the build job running successfully:
 
 <img width="960" alt="build ok" src="https://github.com/CirineS/Building-a-CI_CD-Pipeline-Project/assets/142796680/c11d9e2e-9a25-4275-a17c-b03024f40032">
