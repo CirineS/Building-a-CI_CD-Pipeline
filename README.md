@@ -61,6 +61,16 @@ Once, done, we're now able to create the pipeline. Under pipelines, you click on
   <img width="737" alt="exec make predict" src="https://github.com/CirineS/Building-a-CI_CD-Pipeline-Project/assets/142796680/9ac4211d-f8fe-40f9-b0bb-de167c65664e">
 
 
+* **Successful prediction from deployed flask app in Azure Cloud Shell**
+  
+  ![run locust](https://github.com/CirineS/Building-a-CI_CD-Pipeline-Project/assets/142796680/49d021a7-dd64-4a35-9f6e-03949cb00c10)
+
+  By creating some tests using locust and running them in the command line; this will run the locust file. You can see the results below in the localhost 8089:
+  <img width="960" alt="pantallazo_locust" src="https://github.com/CirineS/Building-a-CI_CD-Pipeline-Project/assets/142796680/32bf3ef0-9926-41ad-8c31-84f8a927b5de">
+
+  <img width="942" alt="Capture charts" src="https://github.com/CirineS/Building-a-CI_CD-Pipeline-Project/assets/142796680/0ec1bdf0-2fe7-4c41-80a4-94b38eab1859">
+
+
 * **Running Azure App Service from Azure Pipelines automatic deployment**
   
 This screenshot is the build job running successfully:
